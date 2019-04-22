@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "V:/Verilog/MIPSPipelined/register_file.xst" -ofn "V:/Verilog/MIPSPipelined/register_file.syr" 

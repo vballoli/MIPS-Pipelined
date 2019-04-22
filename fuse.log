@@ -1,0 +1,36 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "V:/Verilog/MIPSPipelined/tb_mips_isim_beh.exe" -prj "V:/Verilog/MIPSPipelined/tb_mips_beh.prj" "work.tb_mips" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/register_file.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/program_counter.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/pipeline_register.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/instruction_fetch.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/forwarding_unit.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/exe.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/control_unit.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/branch.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/mips.v" into library work
+Analyzing Verilog file "V:/Verilog/MIPSPipelined/tb_mips.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "V:/Verilog/MIPSPipelined/mips.v" Line 34: Size mismatch in connection of port <data>. Formal port size is 8-bit while actual signal size is 32-bit.
+Completed static elaboration
+Compiling module program_counter
+Compiling module instruction_fetch
+Compiling module pipeline_register
+Compiling module register_files
+Compiling module exe
+Compiling module control_unit
+Compiling module forwarding_unit
+Compiling module branch
+Compiling module mips
+Compiling module tb_mips
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 11 Verilog Units
+Built simulation executable V:/Verilog/MIPSPipelined/tb_mips_isim_beh.exe
+Fuse Memory Usage: 27592 KB
+Fuse CPU Usage: 749 ms

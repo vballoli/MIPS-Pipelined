@@ -1,0 +1,6 @@
+verilog isim_temp "program_counter.v"
+verilog isim_temp "pipeline_register.v"
+verilog isim_temp "instruction_fetch.v"
+verilog isim_temp "m.v"
+verilog isim_temp "tb_m.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
