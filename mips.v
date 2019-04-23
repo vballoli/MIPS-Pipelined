@@ -29,7 +29,7 @@ wire write_reg, exe_ctrl, pc_jump_sel, alu_forward_control;
 
 program_counter pc (previous_address, clk, reset, instruction_address);
 
-instruction_fetch i_f (instruction_address, reset, opcode, rDest, rSrc, immediate_data, jump_address);
+instruction_fetch i_f (previous_address, reset, opcode, rDest, rSrc, immediate_data, jump_address);
 
 pipeline_register if_id (clk, if_id_reset, opcode, rDest, rSrc, immediate_data, jump_address, 0, 
 	if_opcode, if_rSrc, if_rDest, if_immediate_data, if_jump_address, if_empty);
@@ -66,6 +66,9 @@ begin
 		//$write("ID Data chosen");
 		forwarded_data = id_data;
 	end
+	
+//	if (pc_jump_sel == 1)
+//		instruction_address = previous_address;
 end
 
 

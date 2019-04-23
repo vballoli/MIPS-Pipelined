@@ -30,7 +30,7 @@ module branch(
 		if (select == 1)
 			new_address = jump_address;
 		else
-			new_address = instruction_address;
+			new_address = instruction_address + 1;
 	 end
 
 

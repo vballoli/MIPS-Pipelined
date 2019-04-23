@@ -20,13 +20,11 @@ module instruction_fetch(
 	if (reset == 1)
 		begin
 		instruction_file[0] = 8'b00001000;
-		instruction_file[1] = 8'b00001000;
-		//instruction_file[1] = 8'b00001000;
-		instruction_file[2] = 8'b01001011;
-		instruction_file[3] = 8'b01000010;
-		instruction_file[4] = 8'b11000101;
-		instruction_file[5] = 8'b00000000;
-		instruction_file[6] = 8'b01100101;
+		instruction_file[1] = 8'b01001011;
+		instruction_file[2] = 8'b01000010;
+		instruction_file[3] = 8'b11000101;
+		instruction_file[4] = 8'b00000000;
+		instruction_file[5] = 8'b01100101;
 		end
 	end
 	

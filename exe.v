@@ -10,7 +10,7 @@ module exe(
 	always @ (*)
 	begin
 		if (ctrl == 1)
-			exe_output = input_1 + input_2;
+			exe_output = {input_1[7:3] ,input_1[2:0] + input_2[2:0]};
 		else
 			exe_output = input_1;
 	end

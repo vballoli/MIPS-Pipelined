@@ -114,8 +114,11 @@ LAB9:    t22 = (t6 + 4);
 LAB11:    xsi_set_current_line(33, ng0);
     t2 = (t0 + 1048U);
     t3 = *((char **)t2);
-    t2 = (t0 + 1768);
-    xsi_vlogvar_assign_value(t2, t3, 0, 0, 8);
+    t2 = ((char*)((ng1)));
+    memset(t6, 0, 8);
+    xsi_vlog_unsigned_add(t6, 32, t3, 8, t2, 32);
+    t4 = (t0 + 1768);
+    xsi_vlogvar_assign_value(t4, t6, 0, 0, 8);
 
 LAB12:    goto LAB2;
 

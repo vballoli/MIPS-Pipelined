@@ -11,13 +11,13 @@ module program_counter(
 	 begin
 	 
 	 if (reset == 1)
-		instruction_address = 0;
+		instruction_address = -1;
 	 
 	 end
 	 
 	 always @ (posedge clk)
 	 begin
-		instruction_address = previous_address + 1;
+		instruction_address = previous_address;
 	 end
 
 
