@@ -24,7 +24,7 @@ module instruction_fetch(
 		instruction_file[2] = 8'b01000010;
 		instruction_file[3] = 8'b11000101;
 		instruction_file[4] = 8'b00000000;
-		instruction_file[5] = 8'b01100101;
+		instruction_file[5] = 8'b01000101;
 		end
 	end
 	

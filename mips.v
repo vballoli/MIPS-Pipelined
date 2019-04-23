@@ -39,7 +39,7 @@ register_files rf (if_rSrc, exe_rDest, write_reg, exe_data, reset, data);
 pipeline_register id_ex (clk, id_exe_reset, if_opcode, if_rDest, if_rSrc, if_immediate_data, if_jump_address, data,
 	id_opcode, id_rSrc, id_rDest, id_immediate_data, id_jump_address, id_data);
 
-// Input 2 MUX - control signal from control unit
+// Input 1 and 2 MUX - control signal from control and forwarding unit
 
 always @ (*)
 begin
@@ -67,8 +67,6 @@ begin
 		forwarded_data = id_data;
 	end
 	
-//	if (pc_jump_sel == 1)
-//		instruction_address = previous_address;
 end
 
 
@@ -76,15 +74,15 @@ exe al (forwarded_data, input_2, exe_ctrl, alu_data);
 
 pipeline_register ex_wb (clk, exe_wb_reset, id_opcode, id_rDest, id_rSrc, id_immediate_data, id_jump_address, alu_data, 
 	exe_opcode, exe_rSrc, exe_rDest, exe_immediate_data, exe_jump_address, exe_data);
-	
-// /* Decide branch module 
 
-// /* Add stuff to control module for write_reg, alu_input and control signal and branch instructions
+// /* Inputs to control module for write_reg, alu_input and control signal and branch instructions
 control_unit cu (if_opcode, id_opcode, exe_opcode, write_reg, exe_ctrl, pc_jump_sel);
 
 // /* forwarding unit for deciding the register resets and input to ALU Decide between exe data and id data
-forwarding_unit fu (exe_opcode, id_rSrc, id_rDest, exe_rDest, reset, if_id_reset, id_exe_reset, exe_wb_reset, alu_forward_control);
+forwarding_unit fu (exe_opcode, id_rSrc, id_rDest, exe_rDest, reset, if_id_reset, id_exe_reset,
+	exe_wb_reset, alu_forward_control);
 
+// /* Decide branch module
 branch b (instruction_address, if_jump_address, pc_jump_sel, previous_address);	
 
 endmodule

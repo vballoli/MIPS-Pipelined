@@ -32,7 +32,7 @@ static unsigned int ng7[] = {197U, 0U};
 static int ng8[] = {3, 0};
 static unsigned int ng9[] = {0U, 0U};
 static int ng10[] = {4, 0};
-static unsigned int ng11[] = {101U, 0U};
+static unsigned int ng11[] = {69U, 0U};
 static int ng12[] = {5, 0};
 
 
